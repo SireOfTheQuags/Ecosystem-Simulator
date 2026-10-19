@@ -1,0 +1,28 @@
+maybe simulate different environments that change throughout time.
+
+actually simulate it
+
+make reproductive chance dependent on species
+
+
+def move(self, move_cost, landscape):
+        landscape_size = len(landscape)
+        landscape[self.x, self.y].discard(self)
+        dx = np.random.randint(-self.speed, self.speed + 1) 
+        dy = np.random.randint(-self.speed, self.speed + 1) 
+
+        x = self.x + dx
+        y = self.y + dy
+
+        if x >= landscape_size or x < 0:
+            self.x = self.x - dx
+        else:
+            self.x = x
+        if y >= landscape_size or y < 0:
+            self.y = self.y - dy
+        else:
+            self.y = y
+        
+        landscape[self.x, self.y].add(self)
+        self.hunger -= move_cost * 0.5*self.size*(dy**2 + dx**2) 
+        return np.sqrt(dx**2+dy**2)
