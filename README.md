@@ -7,7 +7,7 @@ If you are setting up on a different computer and need to pull the repository:
 1. Install [Git](https://git-scm.com/).
 2. Open the command terminal and navigate to the target directory (e.g., `D:` and then `cd D:\School`).
 3. Run the clone command:
-   `git clone https://github.com/SireOfTheQuags/PE1.git`. Inside this directory a folder 'PE1' will be created.
+   `git clone https://github.com/SireOfTheQuags/Ecosystem-Simulator.git`. Inside this directory a folder 'PE1' will be created.
 
 ## Committing to github or updating your local repository
 
